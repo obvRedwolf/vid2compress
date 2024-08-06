@@ -14,8 +14,8 @@ vid2compress is an easy to use video compresser written in [Python](https://www.
 # Features
 
 * Autodetection of video files.
-* Fast compression
-* Easy to use
+* Fast compression.
+* Easy to use.
 
 # Installation
 
