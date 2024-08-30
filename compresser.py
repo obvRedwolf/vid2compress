@@ -1,8 +1,9 @@
-import subprocess
-import os
-import time
 import mimetypes
+import os
+import subprocess
+import time
 from shutil import which
+
 
 # check if ffmpeg installed or available
 def checkffmpeg():
@@ -13,15 +14,18 @@ def checkffmpeg():
     )
     exit(1)
 
+
 def createFolders(folder):
     if not os.path.exists(folder):
         os.makedirs(folder)
+
 
 # loops through input directory, tries to find video files, and adds it to a list
 def findVideoFiles(list):
     for fileName in os.listdir("input"):
         if mimetypes.guess_type(fileName)[0].startswith("video"):
             list.append(fileName)
+
 
 # repeatedly asks user for a valid crf value between 0 and 51
 def crfValueInput():
